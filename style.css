@@ -1,0 +1,159 @@
+/* الألوان المقترحة: أساسي داكن، ثانوي أزرق كهربائي */
+:root {
+    --color-dark: #12121e;        /* كحلي غامق للخلفية */
+    --color-primary: #00e0ff;     /* أزرق كهربائي للأزرار والتميز */
+    --color-text: #ffffff;        /* أبيض للنصوص */
+    --color-secondary-text: #cccccc; /* رمادي فاتح للنصوص الثانوية */
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--color-dark);
+    color: var(--color-text);
+    text-align: center;
+    direction: rtl; /* لضمان اتجاه النص العربي */
+}
+
+/* إدارة الصفحات */
+.page {
+    display: none;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.page.active {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- تصميم واجهة الدخول --- */
+#login-page {
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a33; /* خلفية أغمق قليلاً */
+}
+
+#login-page header {
+    padding: 40px;
+}
+
+#login-page h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.highlight {
+    color: var(--color-primary);
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: var(--color-dark);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #00b3cc;
+}
+
+/* --- تصميم صفحة JOTARO الرئيسية --- */
+#main-page {
+    padding-top: 60px; /* مساحة للشريط العلوي */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #0d0d1b;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.jotaro-name {
+    color: #ffcc00; /* لون ذهبي للقب JOTARO */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #ffcc00;
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 60px 0;
+    margin-top: 20px;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.feature-card {
+    background-color: #1a1a33;
+    padding: 20px;
+    border-radius: 8px;
+    flex: 1;
+    text-align: right;
+    border-right: 3px solid var(--color-primary);
+    transition: transform 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: var(--color-primary);
+}
+
+.call-to-action {
+    padding: 60px 0;
+    margin-top: 40px;
+    background-color: #0d0d1b;
+    border-radius: 10px;
+}
